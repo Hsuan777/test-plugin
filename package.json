@@ -9,7 +9,8 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.umd.js"
+      "require": "./dist/index.umd.js",
+      "types": "./dist/types/index.d.ts"
     },
     "./dist/style.css": "./dist/style.css",
     "./types/*": "./dist/types/*"
