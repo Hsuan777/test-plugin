@@ -1,0 +1,46 @@
+{
+  "name": "@vic/shared-button-library",
+  "private": false,
+  "version": "1.0.0",
+  "description": "A shared button component library for Vue 3.",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -d && vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "vue",
+    "button",
+    "component-library"
+  ],
+  "dependencies": {
+    "vue": "^3.5.24"
+  },
+  "author": "Vic",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "vite": "npm:rolldown-vite@7.2.5",
+    "vue-tsc": "^3.1.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@7.2.5"
+    }
+  }
+}
