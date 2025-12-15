@@ -1,6 +1,6 @@
 {
   "name": "@vic/shared-button-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A shared button component library for Vue 3.",
   "main": "dist/shared-button-library.umd.cjs",
   "type": "module",
@@ -9,7 +9,8 @@
     ".": {
       "import": "./dist/shared-button-library.js",
       "require": "./dist/shared-button-library.umd.cjs"
-    }
+    },
+    "./dist/style.css": "./dist/shared-button-library.css"
   },
   "files": [
     "dist"
