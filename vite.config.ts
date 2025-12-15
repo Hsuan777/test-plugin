@@ -9,13 +9,24 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'), // 套件入口文件
       name: 'SharedButtonLibrary',
-      fileName: 'shared-button-library'
+      formats: ['es', 'umd'],
+      fileName: (format) => {
+        if (format === 'es') return 'index.js'
+        if (format === 'umd') return 'index.umd.js'
+        return `index.${format}.js`
+      }
     },
     rollupOptions: {
       external: ['vue'], // 排除 Vue，避免打包進去
       output: {
         globals: {
           vue: 'Vue'
+        },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+            return 'style.css'
+          }
+          return assetInfo.name || 'asset'
         }
       }
     }
