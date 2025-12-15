@@ -5,13 +5,16 @@
   "main": "dist/index.umd.js",
   "type": "module",
   "module": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.umd.js"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css",
+    "./types/*": "./dist/types/*"
   },
+  
   "files": [
     "dist"
   ],
@@ -26,6 +29,7 @@
     "component-library"
   ],
   "dependencies": {
+    "vite-plugin-dts": "^4.5.4",
     "vue": "^3.5.24"
   },
   "author": "Vic",
