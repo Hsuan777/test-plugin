@@ -1,9 +1,16 @@
 <script setup lang="ts">
-import { BaseButton } from './components'
+import BaseButton from './components/BaseButton.vue';
+
+const onClick = () => {
+  alert('Button Clicked')
+}
 </script>
 
 <template>
-  <BaseButton type="secondary" @click="() => alert('Secondary Button Clicked')">
+  <BaseButton type="primary" @click="onClick">
+    Primary Button
+  </BaseButton>
+  <BaseButton type="secondary" @click="onClick">
     Secondary Button
   </BaseButton>
 </template>

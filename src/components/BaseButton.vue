@@ -1,21 +1,26 @@
 <script setup lang="ts">
+import { computed } from 'vue'
+interface Props {
+  type?: 'primary' | 'secondary'
+  click?: () => void
+}
 
-defineProps({
-  type: {
-    type: String,
-    default: 'primary', // 預設按鈕類型
-  },
+const props = withDefaults(defineProps<Props>(), {
+  type: 'primary',
+  click: () => {
+    /* default no-op */
+  }
 })
 
-const emit = defineEmits(['click'])
-
-function onClick(event: MouseEvent) {
-  emit('click', event)
-}
+const buttonClass = computed(() => ({
+  'btn': true,
+  'primary': props.type === 'primary',
+  'secondary': props.type === 'secondary'
+}))
 </script>
 
 <template>
-  <button class="base-button" :class="type" @click="onClick">
+  <button class="base-button" :class="buttonClass" @click="props.click">
     <slot />
   </button>
 </template>

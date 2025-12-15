@@ -1,15 +1,14 @@
 {
   "name": "@vic/shared-button-library",
-  "private": false,
   "version": "1.0.0",
   "description": "A shared button component library for Vue 3.",
-  "main": "dist/index.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/shared-button-library.umd.cjs",
+  "type": "module",
+  "module": "./dist/shared-button-library.js",
   "exports": {
     ".": {
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.js"
+      "import": "./dist/shared-button-library.js",
+      "require": "./dist/shared-button-library.umd.cjs"
     }
   },
   "files": [
@@ -17,7 +16,7 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -d && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "keywords": [

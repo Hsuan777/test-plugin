@@ -7,9 +7,9 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/components/index.ts'), // 套件入口文件
+      entry: resolve(__dirname, 'src/index.ts'), // 套件入口文件
       name: 'SharedButtonLibrary',
-      fileName: (format) => `shared-button-library.${format}.js`
+      fileName: 'shared-button-library'
     },
     rollupOptions: {
       external: ['vue'], // 排除 Vue，避免打包進去
