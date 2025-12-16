@@ -4,12 +4,12 @@
   "description": "A shared button component library for Vue 3.",
   "main": "dist/index.js",
   "type": "module",
-  "module": "./dist/index.js",
+  "module": "./dist/index.umd.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.js",
+      "require": "./dist/index.umd.js",
       "types": "./dist/types/index.d.ts"
     },
     "./dist/style.css": "./dist/style.css",
