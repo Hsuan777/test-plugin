@@ -12,8 +12,7 @@
       "require": "./dist/index.umd.js",
       "types": "./dist/types/index.d.ts"
     },
-    "./dist/style.css": "./dist/style.css",
-    "./types/*": "./dist/types/*"
+    "./dist/style.css": "./dist/style.css"
   },
   
   "files": [
