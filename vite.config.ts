@@ -13,7 +13,8 @@ export default defineConfig({
       // 將 .d.ts 檔案打包到 dist/types 資料夾 (可選，但建議分離)
       outDir: 'dist/types',
       // 可選：如果你希望打包後的 .d.ts 包含在同一個資料夾，設為 true
-      insertTypesEntry: true, 
+      insertTypesEntry: true,
+      include: ['src/**/*']
     })
   ],
   build: {

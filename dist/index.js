@@ -1,27 +1,21 @@
-import { computed, createElementBlock, defineComponent, normalizeClass, openBlock, renderSlot } from "vue";
-var BaseButton_default = /* @__PURE__ */ ((e, r) => {
-	let i = e.__vccOpts || e;
-	for (let [e, a] of r) i[e] = a;
-	return i;
-})(/* @__PURE__ */ defineComponent({
-	__name: "BaseButton",
+import { createElementBlock, createElementVNode, defineComponent, openBlock, ref, toDisplayString, watch } from "vue";
+var _hoisted_1 = ["value", "type"], BaseInput_default = /* @__PURE__ */ defineComponent({
+	__name: "BaseInput",
 	props: {
-		type: { default: "primary" },
-		click: {
-			type: Function,
-			default: () => {}
-		}
+		value: { default: "" },
+		type: { default: "text" }
 	},
-	setup(i) {
-		let o = i, s = computed(() => ({
-			btn: !0,
-			primary: o.type === "primary",
-			secondary: o.type === "secondary"
-		}));
-		return (e, i) => (openBlock(), createElementBlock("button", {
-			class: normalizeClass(["base-button", s.value]),
-			onClick: i[0] ||= (...e) => o.click && o.click(...e)
-		}, [renderSlot(e.$slots, "default", {}, void 0, !0)], 2));
+	setup(o) {
+		let c = ref(""), l = o, u = (e) => {
+			c.value = e.target.value;
+		};
+		return watch(() => l.value, (e) => {
+			console.log(e), c.value = e || "";
+		}, { immediate: !0 }), (o, s) => (openBlock(), createElementBlock("div", null, [createElementVNode("input", {
+			value: c.value,
+			type: l.type,
+			onInput: u
+		}, null, 40, _hoisted_1), createElementVNode("p", null, toDisplayString(c.value), 1)]));
 	}
-}), [["__scopeId", "data-v-66b5dcab"]]);
-export { BaseButton_default as BaseButton };
+});
+export { BaseInput_default as BaseInput };
