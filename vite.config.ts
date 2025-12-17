@@ -14,7 +14,7 @@ export default defineConfig({
       // entryRoot: 'src/index.ts',
       // outDir: 'dist',
       // 可選：如果你希望打包後的 .d.ts 包含在同一個資料夾，設為 true
-      insertTypesEntry: true,
+      // insertTypesEntry: true,
       // include: ['src/components/*']
     })
   ],

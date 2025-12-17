@@ -10,7 +10,7 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.umd.js",
-      "types": "./dist/types/index.d.ts"
+      "types": "./dist/index.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
