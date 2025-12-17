@@ -1,5 +1,5 @@
 {
-  "name": "@vic/shared-button-library",
+  "name": "@vic/shared-library",
   "version": "1.0.1",
   "description": "A shared button component library for Vue 3.",
   "main": "dist/index.umd.js",
