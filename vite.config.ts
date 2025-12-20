@@ -11,8 +11,8 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      rollupTypes : true,
-      insertTypesEntry: true,
+      rollupTypes : true, // 啟用此選項可將型別宣告合併為單一檔案
+      insertTypesEntry: true, // 參考 package.json 中的 types 欄位
       tsconfigPath : './tsconfig.app.json',
     })
   ],

@@ -10,11 +10,7 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    /* 關鍵：JSX 處理 (Vue 必備) */
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
+    "noUncheckedSideEffectImports": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
