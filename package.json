@@ -1,6 +1,6 @@
 {
   "name": "@vics/shared-library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A shared button component library for Vue 3.",
   "main": "dist/index.umd.cjs",
   "type": "module",

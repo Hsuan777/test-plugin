@@ -3,5 +3,5 @@ import BaseButton from './components/BaseButton.vue';
 </script>
 
 <template>
-  <BaseButton>Click Me</BaseButton>
+  <BaseButton>111</BaseButton>
 </template>
