@@ -11,11 +11,9 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-      // entryRoot: 'src/index.ts',
-      // outDir: 'dist',
-      // 可選：如果你希望打包後的 .d.ts 包含在同一個資料夾，設為 true
+      rollupTypes : true,
       insertTypesEntry: true,
-      // include: ['src/components/*']
+      tsconfigPath : './tsconfig.app.json',
     })
   ],
   build: {
@@ -23,11 +21,7 @@ export default defineConfig({
       entry: resolve(__dirname, 'src/index.ts'), // 套件入口文件
       name: 'SharedButtonLibrary',
       formats: ['es', 'umd'],
-      fileName: (format) => {
-        if (format === 'es') return 'index.js'
-        if (format === 'umd') return 'index.umd.js'
-        return `index.${format}.js`
-      }
+      fileName: 'index',
     },
     rollupOptions: {
       external: ['vue'], // 排除 Vue，避免打包進去

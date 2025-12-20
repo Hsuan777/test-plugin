@@ -1,21 +1,9 @@
-import { createElementBlock, createElementVNode, defineComponent, openBlock, ref, toDisplayString, watch } from "vue";
-var _hoisted_1 = ["value", "type"], src_default = { BaseInput: /* @__PURE__ */ defineComponent({
-	__name: "BaseInput",
-	props: {
-		value: { default: "" },
-		type: { default: "text" }
-	},
-	setup(o) {
-		let c = ref(""), l = o, u = (e) => {
-			c.value = e.target.value;
-		};
-		return watch(() => l.value, (e) => {
-			console.log(e), c.value = e || "";
-		}, { immediate: !0 }), (o, s) => (openBlock(), createElementBlock("div", null, [createElementVNode("input", {
-			value: c.value,
-			type: l.type,
-			onInput: u
-		}, null, 40, _hoisted_1), createElementVNode("p", null, toDisplayString(c.value), 1)]));
+import { createElementBlock, defineComponent, openBlock, renderSlot } from "vue";
+var _hoisted_1 = ["type"], BaseButton_default = /* @__PURE__ */ defineComponent({
+	__name: "BaseButton",
+	props: { type: {} },
+	setup(i) {
+		return (a, o) => (openBlock(), createElementBlock("button", { type: i.type || "button" }, [renderSlot(a.$slots, "default")], 8, _hoisted_1));
 	}
-}) };
-export { src_default as default };
+});
+export { BaseButton_default as BaseButton };

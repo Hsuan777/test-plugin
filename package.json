@@ -1,15 +1,15 @@
 {
-  "name": "@vic/shared-library",
+  "name": "@vics/shared-library",
   "version": "1.0.1",
   "description": "A shared button component library for Vue 3.",
-  "main": "dist/index.umd.js",
+  "main": "dist/index.umd.cjs",
   "type": "module",
   "module": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.umd.js",
+      "require": "./dist/index.umd.cjs",
       "types": "./dist/types/index.d.ts"
     },
     "./dist/style.css": "./dist/style.css"
