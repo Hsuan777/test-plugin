@@ -1,2 +1,2 @@
-import { default as BaseButton } from './components/BaseButton.vue';
-export { BaseButton };
+export * from './src/index'
+export {}
