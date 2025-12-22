@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import dts from 'vite-plugin-dts'
+import tailwindcss from '@tailwindcss/vite'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -10,6 +11,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
   plugins: [
     vue(),
+    tailwindcss(),
     dts({
       rollupTypes : true, // 啟用此選項可將型別宣告合併為單一檔案
       insertTypesEntry: true, // 參考 package.json 中的 types 欄位

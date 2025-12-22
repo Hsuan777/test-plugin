@@ -4,4 +4,5 @@ import BaseButton from './components/BaseButton.vue';
 
 <template>
   <BaseButton>111</BaseButton>
+  <BaseButton variant="secondary">111</BaseButton>
 </template>
