@@ -7,6 +7,7 @@ declare const __VLS_component: DefineComponent<__VLS_Props, {}, {}, {}, {}, Comp
 
 declare type __VLS_Props = {
     type?: 'button' | 'submit' | 'reset';
+    variant?: 'primary' | 'secondary' | 'tertiary';
 };
 
 declare function __VLS_template(): {
