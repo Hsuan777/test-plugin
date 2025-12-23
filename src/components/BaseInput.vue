@@ -22,7 +22,7 @@
 
 <template>
   <div>
-    <input :value="inputValue" :type="props.type" @input="onChange" />
+    <input class="border" :value="inputValue" :type="props.type" @input="onChange" />
     <p>{{ inputValue }}</p>
   </div>
 </template>
