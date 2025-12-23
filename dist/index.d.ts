@@ -29,4 +29,14 @@ declare type __VLS_WithTemplateSlots<T, S> = T & {
 
 export declare const BaseButton: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 
+export declare const BaseInput: DefineComponent<Props, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<Props> & Readonly<{}>, {
+type: "text" | "password";
+value: string;
+}, {}, {}, {}, string, ComponentProvideOptions, false, {}, HTMLDivElement>;
+
+declare interface Props {
+    value?: string;
+    type?: 'text' | 'password';
+}
+
 export { }
